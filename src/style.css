@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Tinos', cursive;
+    @apply cursor-none;
+}
+
+.cursor {
+    @apply absolute inset-0 size-24 bg-white/5 backdrop-blur-lg rounded-full pointer-events-none z-10 flex justify-center items-center;
+
+    p {
+        @apply text-xs uppercase;
+    }
+}
+
+.container {
+    @apply w-screen h-screen overflow-hidden;
+}
+
+.content {
+    @apply w-md mx-auto h-full flex flex-col justify-between py-12 overflow-hidden;
+}
+
+.story-img {
+    @apply absolute inset-0 w-screen h-screen overflow-hidden opacity-50;
+
+    img {
+        @apply absolute inset-0 w-full h-full object-cover;
+    }
+}
+
+.breadcrumbs {
+    @apply mx-auto w-md h-3 flex justify-between items-center gap-1;
+
+    .breadcrumbs-item {
+        @apply relative w-full h-px bg-white/30;
+
+        .highlight {
+            @apply absolute w-0 top-0 left-0 h-full bg-white;
+        }
+    }
+}
+
+.profile {
+    @apply w-full h-16 flex gap-4 items-center;
+
+    .profile-icon {
+        @apply relative size-10 rounded-full overflow-hidden;
+    }
+
+    .profile-name {
+        @apply relative w-52 h-5;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.text-container {
+    @apply relative h-full overflow-hidden;
+
+    .text {
+        @apply absolute w-full overflow-hidden bottom-16;
+
+        .text-line {
+            @apply text-5xl h-16 leading-16 select-none;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    html, body {
+        cursor: default;
+    }
+
+    .container {
+        @apply w-full px-2;
+
+        .content {
+            @apply w-full;
+
+            .text {
+                @apply max-w-full;
+            }
+        }
+    }
+}
