@@ -1,11 +1,9 @@
-# Boilerplate for GSAP + Tailwind
+# Instagram Stories Template
 
-Created with `pnpm create vite`.
+Inspired by Codegrid's [YouTube video](https://www.youtube.com/watch?v=P-DjZyLM53k) and [Exoape](https://www.exoape.com/).
 
-Html, css and js cleaned up.
+## Ingredients
+Vanilla Javascript, Tailwind CSS and GSAP.
 
-Tailwind 4 Installed and configured.
-
-GSAP Installed and imported in main.js.
-
-Enjoy!
+## Build Tool
+Vite
